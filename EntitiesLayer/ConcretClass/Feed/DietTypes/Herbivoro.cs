@@ -1,10 +1,8 @@
-﻿using CrearAnimales.EntitiesLayer.ConcretClass.EntityType;
-using CrearAnimales.EntitiesLayer.Interfaces;
+﻿
 using EntitiesLayer.ConcretClass.Feed.Food;
-using EntitiesLayer.ConcretClass.KingType;
 using EntitiesLayer.Interfaces;
 
-namespace CrearAnimales.EntitiesLayer.ConcretClass.DietTypes
+namespace EntitiesLayer.DietTypes
 {
     public class Herbivoro : IDiet
     {

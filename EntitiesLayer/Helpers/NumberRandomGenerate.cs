@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CrearAnimales.EntitiesLayer.Helpers
+namespace EntitiesLayer.Helpers
 {
     public class NumberRandomGenerate
     {

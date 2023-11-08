@@ -1,8 +1,7 @@
 ﻿using System;
-using CrearAnimales.EntitiesLayer.Interfaces;
 using EntitiesLayer.Interfaces;
 
-namespace CrearAnimales.EntitiesLayer.ConcretClass.EntityType
+namespace EntitiesLayer.ConcretClass.EntityType
 {
     public class Entidad : IEnergy
     {

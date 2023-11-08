@@ -1,9 +1,9 @@
-﻿using CrearAnimales.EntitiesLayer.ConcretClass.Atmosphere.Terrains;
-using CrearAnimales.EntitiesLayer.Interfaces;
+﻿
+using EntitiesLayer.Interfaces;
 
 
 
-namespace CrearAnimales.EntitiesLayer.ConcretClass.Atmosphere.Enviroment
+namespace EntitiesLayer.ConcretClass.Atmosphere.Enviroment
 {
     public class Aerial : IEnviroment
     {

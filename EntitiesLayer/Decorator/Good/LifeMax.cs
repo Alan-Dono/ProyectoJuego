@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CrearAnimales.EntitiesLayer.ConcretClass.EntityType;
+﻿
+using EntitiesLayer.ConcretClass.EntityType;
 using EntitiesLayer.Interfaces;
 
 namespace EntitiesLayer.Decorator
@@ -17,7 +13,8 @@ namespace EntitiesLayer.Decorator
 
         public override void Interact(Entidad entidad)
         {
-            entidad.EnergiaActual = entidad.EnergyMax;
+            base.Interact(entidad);
+            entidad.VidaActual = entidad.VidaMaxima;
         }
 
     }

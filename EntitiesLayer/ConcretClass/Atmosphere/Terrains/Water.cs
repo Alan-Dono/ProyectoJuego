@@ -1,6 +1,6 @@
-﻿using CrearAnimales.EntitiesLayer.Interfaces;
+﻿using EntitiesLayer.Interfaces;
 
-namespace CrearAnimales.EntitiesLayer.ConcretClass.Atmosphere.Enviroment.Terrains
+namespace EntitiesLayer.ConcretClass.Atmosphere.Terrains
 {
     public class Water : ITerrains
     { 

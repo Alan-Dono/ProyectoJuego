@@ -58,6 +58,7 @@
     <Compile Include="ConcretClass\Feed\Food\Meat.cs" />
     <Compile Include="ConcretClass\KingdomType\AnimalKing.cs" />
     <Compile Include="ConcretClass\KingdomType\Vegetal.cs" />
+    <Compile Include="ConcretClass\Maps\Map.cs" />
     <Compile Include="Decorator\Evil\AtkLessRandom.cs" />
     <Compile Include="Decorator\Evil\Dead.cs" />
     <Compile Include="Decorator\Evil\EnergyLeesRandom.cs" />
@@ -76,6 +77,8 @@
     <Compile Include="Interfaces\ITerrains.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Fabricas\Dietas\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CrearAnimales.EntitiesLayer.ConcretClass.EntityType;
+using EntitiesLayer.ConcretClass.EntityType;
 
 namespace EntitiesLayer.Interfaces
 {

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CrearAnimales.EntitiesLayer.ConcretClass.EntityType;
+﻿
+using EntitiesLayer.ConcretClass.EntityType;
 using EntitiesLayer.Interfaces;
 
 namespace EntitiesLayer.Decorator
@@ -18,7 +14,7 @@ namespace EntitiesLayer.Decorator
         }
         public virtual void Interact(Entidad entidad)
         {
-            throw new NotImplementedException();
+            _item.Interact(entidad);
         }
     }
 }

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CrearAnimales.EntitiesLayer.ConcretClass.EntityType;
-using CrearAnimales.EntitiesLayer.Helpers;
+﻿
+using EntitiesLayer.ConcretClass.EntityType;
+using EntitiesLayer.Helpers;
 using EntitiesLayer.Interfaces;
 
 namespace EntitiesLayer.Decorator.Good
@@ -17,6 +13,7 @@ namespace EntitiesLayer.Decorator.Good
 
         public override void Interact(Entidad entidad)
         {
+            base.Interact(entidad);
             entidad.DefPoint += NumberRandomGenerate.GenerateRandomNumber(1, 100);
         }
     }

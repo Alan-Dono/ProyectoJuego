@@ -1,5 +1,5 @@
 ﻿
-namespace CrearAnimales.EntitiesLayer.Interfaces
+namespace EntitiesLayer.Interfaces
 {
     public interface ITerrains
     {

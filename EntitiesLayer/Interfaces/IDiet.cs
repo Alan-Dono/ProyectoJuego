@@ -1,6 +1,6 @@
 ﻿using EntitiesLayer.Interfaces;
 
-namespace CrearAnimales.EntitiesLayer.Interfaces
+namespace EntitiesLayer.Interfaces
 {
     public interface IDiet
     {

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CrearAnimales.EntitiesLayer.ConcretClass.EntityType;
-using EntitiesLayer.Interfaces;
+﻿using EntitiesLayer.Interfaces;
 
 namespace EntitiesLayer.ConcretClass.EntityType
 {
@@ -22,9 +16,6 @@ namespace EntitiesLayer.ConcretClass.EntityType
             Name = name;
             Description = description;
         }
-        public void Interact(Entidad entidad)
-        {
-            throw new NotImplementedException();
-        }
+        public void Interact(Entidad entidad) { }
     }
 }

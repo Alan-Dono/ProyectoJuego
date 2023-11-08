@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CrearAnimales.EntitiesLayer.ConcretClass.EntityType;
-using CrearAnimales.EntitiesLayer.Interfaces;
+﻿
+using EntitiesLayer.ConcretClass.EntityType;
 using EntitiesLayer.Interfaces;
 
 namespace EntitiesLayer.ConcretClass.Feed.Food

@@ -49,20 +49,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComponentsValidator\TextBoxNumberValidator.cs">
-      <SubType>Component</SubType>
+    <Compile Include="Home\FrmCrudEntidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\FrmCrudEntidad.Designer.cs">
+      <DependentUpon>FrmCrudEntidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CrearAnimales.EntitiesLayer.ConcretClass.EntityType.Entidad.datasource" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BiusinessLogicLayer\BusinessLogicLayer.csproj">
-      <Project>{19e87cb2-3895-4ca3-85a8-11df23065bed}</Project>
-      <Name>BusinessLogicLayer</Name>
+    <ProjectReference Include="..\ControllersLayer\ControllersLayer.csproj">
+      <Project>{c4e744ad-89dc-4d19-a665-4726ea672f10}</Project>
+      <Name>ControllersLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntitiesLayer\EntitiesLayer.csproj">
       <Project>{7d8ff6ab-f17d-4d8e-bc41-ad47d38b9791}</Project>
@@ -70,10 +79,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\CaraTexOSWallpaper.png" />
-    <Content Include="Resources\start3.bmp" />
-    <Content Include="Resources\start3.png" />
     <Content Include="sea_wave_logo__3_-removebg-preview.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Home\FrmCrudEntidad.resx">
+      <DependentUpon>FrmCrudEntidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

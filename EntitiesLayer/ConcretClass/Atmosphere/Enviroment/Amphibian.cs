@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CrearAnimales.EntitiesLayer.ConcretClass.Atmosphere.Enviroment.Terrains;
-using CrearAnimales.EntitiesLayer.ConcretClass.Atmosphere.Terrains;
-using CrearAnimales.EntitiesLayer.Interfaces;
+using EntitiesLayer.ConcretClass.Atmosphere.Terrains;
+using EntitiesLayer.Interfaces;
 
 namespace EntitiesLayer.ConcretClass.Atmosphere.Enviroment
 {
-    internal class Amphibian : IEnviroment
+    public class Amphibian : IEnviroment
     {
         private int id;
         private string _name;
