@@ -11,3 +11,16 @@ C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\CrearAnim
 C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\CrearAnimales\ControllersLayer\obj\Debug\ControllersLayer.csproj.CopyComplete
 C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\CrearAnimales\ControllersLayer\obj\Debug\ControllersLayer.dll
 C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\CrearAnimales\ControllersLayer\obj\Debug\ControllersLayer.pdb
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\ControllersLayer\bin\Debug\ControllersLayer.dll
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\ControllersLayer\bin\Debug\ControllersLayer.pdb
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\ControllersLayer\bin\Debug\BiusinessLogicLayer.dll
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\ControllersLayer\bin\Debug\EntitiesLayer.dll
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\ControllersLayer\bin\Debug\DataAccesLayer.dll
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\ControllersLayer\bin\Debug\BiusinessLogicLayer.pdb
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\ControllersLayer\bin\Debug\EntitiesLayer.pdb
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\ControllersLayer\bin\Debug\DataAccesLayer.pdb
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\ControllersLayer\obj\Debug\ControllersLayer.csproj.AssemblyReference.cache
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\ControllersLayer\obj\Debug\ControllersLayer.csproj.CoreCompileInputs.cache
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\ControllersLayer\obj\Debug\ControllersLayer.csproj.CopyComplete
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\ControllersLayer\obj\Debug\ControllersLayer.dll
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\ControllersLayer\obj\Debug\ControllersLayer.pdb

@@ -25,23 +25,38 @@ namespace SmallWord.Home
 
         public void llenarDgv()
         {
-
-            dgvEntidades.DataSource = entityController.GetEntidades();
+            dgvEntidades.Rows.Clear(); // Limpia todas las filas antes de volver a llenar el DataGridView
+            foreach (var x in entityController.GetEntidades())
+            {
+                int rowIndex = dgvEntidades.Rows.Add();
+                dgvEntidades.Rows[rowIndex].Cells[0].Value = x.Id;
+                dgvEntidades.Rows[rowIndex].Cells[1].Value = x.Name;
+                dgvEntidades.Rows[rowIndex].Cells[2].Value = x.Kingdom;
+                dgvEntidades.Rows[rowIndex].Cells[3].Value = x.Enviroment;
+                dgvEntidades.Rows[rowIndex].Cells[4].Value = x.Diet;
+                dgvEntidades.Rows[rowIndex].Cells[5].Value = x.AtkPoint;
+                dgvEntidades.Rows[rowIndex].Cells[6].Value = x.DefPoint;
+                dgvEntidades.Rows[rowIndex].Cells[7].Value = x.RangeAtk;
+                dgvEntidades.Rows[rowIndex].Cells[8].Value = x.VidaMaxima;
+                dgvEntidades.Rows[rowIndex].Cells[9].Value = x.EnergyMax;
+            }
         }
+
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             entityController.crearEntidad(
-                    txtNombre.ToString(),
-                    (IDiet)cbDiet,
-                    (IEnviroment)cbHabitat,
-                    (Ikingdom)cbKingdom,
-                    Convert.ToInt32(txtEnergia),
-                    Convert.ToInt32(txtVida),
-                    Convert.ToInt32(txtAtk),
-                    Convert.ToInt32(txtDef),
-                    Convert.ToInt32(txtRangoAtk)
+                    txtNombre.Text,
+                    (IDiet)cbDiet.SelectedItem,
+                    (IEnviroment)cbHabitat.SelectedItem,
+                    (Ikingdom)cbKingdom.SelectedItem,
+                    Convert.ToInt32(txtEnergia.Text),
+                    Convert.ToInt32(txtVida.Text),
+                    Convert.ToInt32(txtAtk.Text),
+                    Convert.ToInt32(txtDef.Text),
+                    Convert.ToInt32(txtRangoAtk.Text)
                 ); ;
+            llenarDgv();
         }
 
         private void CargarCmBox()
@@ -50,6 +65,10 @@ namespace SmallWord.Home
             frmController.llenarCmBox(cbHabitat, dhrController.GetEnviroments());
             frmController.llenarCmBox(cbKingdom, dhrController.GetKingdoms());
         }
- 
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            splitContainer2.Panel1.Enabled = true;
+        }
     }
 }

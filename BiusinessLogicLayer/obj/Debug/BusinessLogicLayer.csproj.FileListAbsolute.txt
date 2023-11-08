@@ -9,3 +9,14 @@ C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\CrearAnim
 C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\CrearAnimales\BiusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
 C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\CrearAnimales\BiusinessLogicLayer\obj\Debug\BiusinessLogicLayer.dll
 C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\CrearAnimales\BiusinessLogicLayer\obj\Debug\BiusinessLogicLayer.pdb
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\BiusinessLogicLayer\bin\Debug\BiusinessLogicLayer.dll
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\BiusinessLogicLayer\bin\Debug\BiusinessLogicLayer.pdb
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\BiusinessLogicLayer\bin\Debug\DataAccesLayer.dll
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\BiusinessLogicLayer\bin\Debug\EntitiesLayer.dll
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\BiusinessLogicLayer\bin\Debug\DataAccesLayer.pdb
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\BiusinessLogicLayer\bin\Debug\EntitiesLayer.pdb
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\BiusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\BiusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\BiusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\BiusinessLogicLayer\obj\Debug\BiusinessLogicLayer.dll
+C:\Users\ALAN\Desktop\Tercer año\Diseño e implementacion de sistemas\SmallWorld\BiusinessLogicLayer\obj\Debug\BiusinessLogicLayer.pdb

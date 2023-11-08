@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label9 = new System.Windows.Forms.Label();
@@ -50,9 +53,20 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvEntidades = new System.Windows.Forms.DataGridView();
-            this.entidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.entidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ENVIROMENT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KINGDOM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIET = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ATK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DEF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RANGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LIFE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ENERGY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnNuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -79,10 +93,11 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.BurlyWood;
+            this.splitContainer1.Panel2.Controls.Add(this.btnNuevo);
             this.splitContainer1.Panel2.Controls.Add(this.btnClear);
             this.splitContainer1.Panel2.Controls.Add(this.btnSave);
-            this.splitContainer1.Size = new System.Drawing.Size(1087, 693);
-            this.splitContainer1.SplitterDistance = 582;
+            this.splitContainer1.Size = new System.Drawing.Size(1317, 693);
+            this.splitContainer1.SplitterDistance = 584;
             this.splitContainer1.TabIndex = 0;
             // 
             // splitContainer2
@@ -112,12 +127,14 @@
             this.splitContainer2.Panel1.Controls.Add(this.cbKingdom);
             this.splitContainer2.Panel1.Controls.Add(this.txtNombre);
             this.splitContainer2.Panel1.Controls.Add(this.label1);
+            this.splitContainer2.Panel1.Enabled = false;
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dgvEntidades);
-            this.splitContainer2.Size = new System.Drawing.Size(1087, 582);
-            this.splitContainer2.SplitterDistance = 425;
+            this.splitContainer2.Size = new System.Drawing.Size(1317, 584);
+            this.splitContainer2.SplitterDistance = 310;
+            this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
             // 
             // label9
@@ -125,6 +142,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(42, 518);
+            this.label9.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(161, 25);
             this.label9.TabIndex = 35;
@@ -142,7 +160,8 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(42, 460);
+            this.label8.Location = new System.Drawing.Point(42, 457);
+            this.label8.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 25);
             this.label8.TabIndex = 33;
@@ -151,7 +170,7 @@
             // txtDef
             // 
             this.txtDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDef.Location = new System.Drawing.Point(133, 457);
+            this.txtDef.Location = new System.Drawing.Point(133, 454);
             this.txtDef.Name = "txtDef";
             this.txtDef.Size = new System.Drawing.Size(212, 30);
             this.txtDef.TabIndex = 32;
@@ -289,16 +308,53 @@
             // 
             this.dgvEntidades.AllowUserToAddRows = false;
             this.dgvEntidades.AllowUserToDeleteRows = false;
-            this.dgvEntidades.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Coral;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSalmon;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Coral;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEntidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEntidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEntidades.DataSource = this.entidadBindingSource;
+            this.dgvEntidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.NAME,
+            this.ENVIROMENT,
+            this.KINGDOM,
+            this.DIET,
+            this.ATK,
+            this.DEF,
+            this.RANGE,
+            this.LIFE,
+            this.ENERGY});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Coral;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSalmon;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEntidades.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEntidades.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEntidades.Location = new System.Drawing.Point(0, 0);
             this.dgvEntidades.Name = "dgvEntidades";
             this.dgvEntidades.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Coral;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEntidades.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvEntidades.RowHeadersVisible = false;
             this.dgvEntidades.RowHeadersWidth = 51;
+            this.dgvEntidades.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvEntidades.RowTemplate.Height = 24;
-            this.dgvEntidades.Size = new System.Drawing.Size(658, 582);
+            this.dgvEntidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEntidades.Size = new System.Drawing.Size(1006, 584);
             this.dgvEntidades.TabIndex = 0;
             // 
             // btnClear
@@ -320,11 +376,107 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "id";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            this.ID.Width = 125;
+            // 
+            // NAME
+            // 
+            this.NAME.HeaderText = "Nombre";
+            this.NAME.MinimumWidth = 6;
+            this.NAME.Name = "NAME";
+            this.NAME.ReadOnly = true;
+            this.NAME.Width = 125;
+            // 
+            // ENVIROMENT
+            // 
+            this.ENVIROMENT.HeaderText = "Habitat";
+            this.ENVIROMENT.MinimumWidth = 6;
+            this.ENVIROMENT.Name = "ENVIROMENT";
+            this.ENVIROMENT.ReadOnly = true;
+            this.ENVIROMENT.Width = 125;
+            // 
+            // KINGDOM
+            // 
+            this.KINGDOM.HeaderText = "Reino";
+            this.KINGDOM.MinimumWidth = 6;
+            this.KINGDOM.Name = "KINGDOM";
+            this.KINGDOM.ReadOnly = true;
+            this.KINGDOM.Width = 125;
+            // 
+            // DIET
+            // 
+            this.DIET.HeaderText = "Dieta";
+            this.DIET.MinimumWidth = 6;
+            this.DIET.Name = "DIET";
+            this.DIET.ReadOnly = true;
+            this.DIET.Width = 125;
+            // 
+            // ATK
+            // 
+            this.ATK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ATK.HeaderText = "Ataque";
+            this.ATK.MinimumWidth = 6;
+            this.ATK.Name = "ATK";
+            this.ATK.ReadOnly = true;
+            this.ATK.Width = 144;
+            // 
+            // DEF
+            // 
+            this.DEF.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.DEF.HeaderText = "Defenza";
+            this.DEF.MinimumWidth = 6;
+            this.DEF.Name = "DEF";
+            this.DEF.ReadOnly = true;
+            this.DEF.Width = 159;
+            // 
+            // RANGE
+            // 
+            this.RANGE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.RANGE.HeaderText = "Rango";
+            this.RANGE.MinimumWidth = 6;
+            this.RANGE.Name = "RANGE";
+            this.RANGE.ReadOnly = true;
+            this.RANGE.Width = 137;
+            // 
+            // LIFE
+            // 
+            this.LIFE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.LIFE.HeaderText = "Vida";
+            this.LIFE.MinimumWidth = 6;
+            this.LIFE.Name = "LIFE";
+            this.LIFE.ReadOnly = true;
+            this.LIFE.Width = 111;
+            // 
+            // ENERGY
+            // 
+            this.ENERGY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ENERGY.HeaderText = "Energia";
+            this.ENERGY.MinimumWidth = 6;
+            this.ENERGY.Name = "ENERGY";
+            this.ENERGY.ReadOnly = true;
+            this.ENERGY.Width = 152;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Location = new System.Drawing.Point(1155, 34);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(135, 33);
+            this.btnNuevo.TabIndex = 2;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
             // FrmCrudEntidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 693);
+            this.ClientSize = new System.Drawing.Size(1317, 693);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmCrudEntidad";
             this.Text = "FrmHome";
@@ -365,7 +517,6 @@
         private System.Windows.Forms.ComboBox cbKingdom;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvEntidades;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
@@ -381,5 +532,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn enviromentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kingdomDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource entidadBindingSource;
+        private System.Windows.Forms.DataGridView dgvEntidades;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ENVIROMENT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KINGDOM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DIET;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ATK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DEF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RANGE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LIFE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ENERGY;
+        private System.Windows.Forms.Button btnNuevo;
     }
 }
