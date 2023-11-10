@@ -23,10 +23,10 @@ namespace ControllersLayer
             return instance;
         }
 
-        public void llenarCmBox<T>(ComboBox comboBox, List<T> lista)
+        public void llenarCmBox<T>(ComboBox comboBox, List<T> lista, string cabecera)
         {
             comboBox.Items.Clear();
-            comboBox.Items.Add(" -- Seleccione");
+            comboBox.Items.Add(cabecera);
             foreach (T t in lista)
             {
                 comboBox.Items.Add(t);

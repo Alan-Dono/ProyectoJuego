@@ -53,9 +53,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvEntidades = new System.Windows.Forms.DataGridView();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.entidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ENVIROMENT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +64,13 @@
             this.LIFE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ENERGY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.entidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.lblIdEntidad = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.bntEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -93,6 +97,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.BurlyWood;
+            this.splitContainer1.Panel2.Controls.Add(this.bntEliminar);
+            this.splitContainer1.Panel2.Controls.Add(this.btnCancelar);
+            this.splitContainer1.Panel2.Controls.Add(this.btnModificar);
             this.splitContainer1.Panel2.Controls.Add(this.btnNuevo);
             this.splitContainer1.Panel2.Controls.Add(this.btnClear);
             this.splitContainer1.Panel2.Controls.Add(this.btnSave);
@@ -109,6 +116,7 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Teal;
+            this.splitContainer2.Panel1.Controls.Add(this.lblIdEntidad);
             this.splitContainer2.Panel1.Controls.Add(this.label9);
             this.splitContainer2.Panel1.Controls.Add(this.txtRangoAtk);
             this.splitContainer2.Panel1.Controls.Add(this.label8);
@@ -339,6 +347,7 @@
             this.dgvEntidades.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEntidades.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEntidades.Location = new System.Drawing.Point(0, 0);
+            this.dgvEntidades.MultiSelect = false;
             this.dgvEntidades.Name = "dgvEntidades";
             this.dgvEntidades.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -356,25 +365,6 @@
             this.dgvEntidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEntidades.Size = new System.Drawing.Size(1006, 584);
             this.dgvEntidades.TabIndex = 0;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(47, 34);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(135, 33);
-            this.btnClear.TabIndex = 1;
-            this.btnClear.Text = "Limpiar";
-            this.btnClear.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(269, 34);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(135, 33);
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "Guardar";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // ID
             // 
@@ -464,13 +454,76 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(1155, 34);
+            this.btnNuevo.Location = new System.Drawing.Point(1149, 24);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(135, 33);
+            this.btnNuevo.Size = new System.Drawing.Size(143, 43);
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(47, 24);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(143, 43);
+            this.btnClear.TabIndex = 1;
+            this.btnClear.Text = "Limpiar";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Visible = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(240, 24);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(143, 43);
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Visible = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(990, 24);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(143, 43);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modifiar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // lblIdEntidad
+            // 
+            this.lblIdEntidad.AutoSize = true;
+            this.lblIdEntidad.Location = new System.Drawing.Point(47, 13);
+            this.lblIdEntidad.Name = "lblIdEntidad";
+            this.lblIdEntidad.Size = new System.Drawing.Size(64, 16);
+            this.lblIdEntidad.TabIndex = 36;
+            this.lblIdEntidad.Text = "idEntidad";
+            this.lblIdEntidad.Visible = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(1149, 24);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(143, 43);
+            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Visible = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // bntEliminar
+            // 
+            this.bntEliminar.Location = new System.Drawing.Point(830, 24);
+            this.bntEliminar.Name = "bntEliminar";
+            this.bntEliminar.Size = new System.Drawing.Size(143, 43);
+            this.bntEliminar.TabIndex = 5;
+            this.bntEliminar.Text = "Eliminar";
+            this.bntEliminar.UseVisualStyleBackColor = true;
+            this.bntEliminar.Click += new System.EventHandler(this.bntEliminar_Click);
             // 
             // FrmCrudEntidad
             // 
@@ -544,5 +597,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LIFE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ENERGY;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Label lblIdEntidad;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button bntEliminar;
     }
 }

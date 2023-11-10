@@ -16,6 +16,16 @@ namespace EntitiesLayer.ConcretClass.Atmosphere.Enviroment
         public int Id { get => id; set => id = value; }
         public string Name { get => _name; set => _name = value; }
 
+        private static Terrestrial instance;
+        private Terrestrial() { }
+        public static Terrestrial GetInstance()
+        {
+            if (instance == null)
+            {
+                instance = new Terrestrial();
+            }
+            return instance;
+        }
         public bool CanInhabit(ITerrains terrain)
         {
             return terrain is Land;

@@ -9,6 +9,16 @@ namespace EntitiesLayer.ConcretClass.KingType
 {
     public class Vegetal : Ikingdom
     {
+        private static Vegetal instance;
+        private Vegetal() { }
+        public static Vegetal GetInstance()
+        {
+            if (instance == null)
+            {
+                instance = new Vegetal();
+            }
+            return instance;
+        }
         string Ikingdom.GetType()
         {
             return GetType().Name;

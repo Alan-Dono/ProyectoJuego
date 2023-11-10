@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml.Linq;
 using BusinessLogicLayer;
 using EntitiesLayer.ConcretClass.EntityType;
 using EntitiesLayer.Interfaces;
@@ -38,16 +41,55 @@ namespace ControllersLayer
             return _entities;
         }
 
-        public void crearEntidad(string name, IDiet diet, IEnviroment enviroment, Ikingdom kingdom, int energy, int vida, int atk, int def, int rangoAtk)
+        public Entidad GetEntidadById(int id)
         {
-            EntityBLL.AddAnimal(new Entidad(name, diet, enviroment, kingdom, energy, vida, atk, def, rangoAtk));
+            Entidad EntidadEncontrada = EntityBLL.GetEntidadById(id);
+            return EntidadEncontrada;
+        }
+
+        public void GuardarEntidad(int id, string nombre, IDiet diet, IEnviroment habitat, Ikingdom kingdom, int energia, int vida, int ataque, int defensa, int rangoAtaque)
+        {
+            Entidad entidad = GetEntidadById(id);
+
+            if (entidad == null)
+            {
+                crearEntidad(nombre, diet, habitat, kingdom, energia, vida, ataque, defensa, rangoAtaque);
+            }
+            else
+            {
+                entidad.Id = id;
+                entidad.Name = nombre;
+                entidad.Diet = diet;
+                entidad.Enviroment = habitat;
+                entidad.Kingdom = kingdom;
+                entidad.EnergyMax = energia;
+                entidad.VidaMaxima = vida;
+                entidad.AtkPoint = ataque;
+                entidad.DefPoint = defensa;
+                entidad.RangeAtk = rangoAtaque;
+                ModifiarEntidad(entidad);
+            }
             RefrescarLista();
         }
 
-        public void ModifiarEntidad(Entidad entidad)
+
+        private void crearEntidad(string name, IDiet diet, IEnviroment enviroment, Ikingdom kingdom, int energy, int vida, int atk, int def, int rangoAtk)
         {
-            EntityBLL.AlterAnimal(entidad);
-            RefrescarLista();
+            try
+            {
+                EntityBLL.AddAnimal(new Entidad(name, diet, enviroment, kingdom, energy, vida, atk, def, rangoAtk));
+            }
+            catch(Exception e) { MessageBox.Show(e.Message); }
+        }
+
+        private void ModifiarEntidad(Entidad entidad)
+        {
+
+            try
+            {
+                EntityBLL.AlterAnimal(entidad);
+            }
+            catch (Exception e) { MessageBox.Show(e.Message); }
         }
 
         public void EliminarEntidad(Entidad entidad)

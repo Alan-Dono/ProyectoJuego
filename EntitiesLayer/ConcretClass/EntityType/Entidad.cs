@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using EntitiesLayer.Decorator.Evil;
 using EntitiesLayer.Interfaces;
 
 namespace EntitiesLayer.ConcretClass.EntityType
@@ -24,14 +26,72 @@ namespace EntitiesLayer.ConcretClass.EntityType
 
         #region Properties
         public int Id { get => _id; set => _id = value; }
-        public string Name { get => _name; set => _name = value; }
+        public string Name 
+        { get => _name;
+            set
+            {
+                EsCadenaSoloLetras(value, "nombre");
+                EsNuloOConEspacios(value, "nombre");
+                ValidarNoNuloOVacio(value, "nombre");
+                _name = value;  
+            }
+        }
         public int EnergiaActual { get => _energiaActual; set => _energiaActual = value; }
-        public int EnergyMax { get => _energyMax; set => _energyMax = value; }
-        public int VidaMaxima { get => _vidaMaxima; set => _vidaMaxima = value; }
+
+        public int EnergyMax
+        {
+            get => _energyMax;
+            set
+            {
+                EsNumeroEntero(value.ToString(), "energia");
+                ValidarNoNegativo(value, "energia");
+                _energyMax = value;
+            }
+        }
+        public int VidaMaxima 
+        { 
+            get => _vidaMaxima; 
+            set
+            {
+                EsNumeroEntero(value.ToString(), "vida");
+                ValidarNoNegativo(value, "vida");
+                _vidaMaxima = value;
+            }
+        }
         public int VidaActual { get => _vidaActual; set => _vidaActual = value; }
-        public int AtkPoint { get => _atkPoint; set => _atkPoint = value; }
-        public int DefPoint { get => _defPoint; set => _defPoint = value; }
-        public int RangeAtk { get => _rangeAtk; set => _rangeAtk = value; }
+        public int AtkPoint 
+        { 
+            get => _atkPoint; 
+            set
+            {
+                EsNumeroEntero(value.ToString(), "ataque");
+                ValidarNoNegativo(value, "ataque");
+                _atkPoint = value;
+            }
+        }
+        public int DefPoint 
+        { 
+            get => _defPoint;
+            set
+            {
+                EsNumeroEntero(value.ToString(), "defenza");
+                ValidarNoNegativo(value, "defenza");
+                _defPoint = value;
+            }
+        }
+        public int RangeAtk 
+        { 
+            get => _rangeAtk;
+            set
+            {
+                EsNumeroEntero(value.ToString(), "rango");
+                if (value != 0 && value != 1)
+                {
+                    throw new ArgumentException("El campo rango solo puede ser 0 o 1.");
+                }
+                _rangeAtk = value;
+            }
+        }
         public IDiet Diet { get => _diet; set => _diet = value; }
         public IEnviroment Enviroment { get => _enviroment; set => _enviroment = value; }
         public Ikingdom Kingdom { get => _kingdom; set => _kingdom = value; }
@@ -220,6 +280,60 @@ namespace EntitiesLayer.ConcretClass.EntityType
             VidaActual = 0;
             // Eliminarla del mapa
         }
+        #endregion
+
+        #region Validations
+        // strings
+        private bool EsNuloOConEspacios(string input, string campo)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                throw new ArgumentException($"El campo {campo} es requerido.");
+            }
+            return true;
+        }
+        private void EsCadenaSoloLetras(string input, string campo)
+        {
+            foreach (char c in input)
+            {
+                if (!char.IsLetter(c))
+                {
+                    throw new ArgumentException($"El campo {campo} solo permite letras.");
+                }
+            }
+        }
+
+        private void ValidarNoNuloOVacio(string value, string campo)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                throw new ArgumentException($"El campo {campo} no puede ser nulo o vacío.");
+            }
+        }
+        //---------------------------------------
+        // Numeros
+
+
+        private void ValidarNoNegativo(int value, string campo)
+        {
+            if (value < 0)
+            {
+                throw new ArgumentException($"El campo {campo} no puede ser negativo.");
+            }
+        }
+
+        private void EsNumeroEntero(string input, string campo)
+        {
+            foreach (char c in input)
+            {
+                if (!char.IsDigit(c))
+                {
+                    throw new ArgumentException($"El campo {campo} solo permite números.");
+                }
+            }
+        }
+
+
         #endregion
     }
 

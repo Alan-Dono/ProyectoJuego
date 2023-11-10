@@ -37,6 +37,12 @@ namespace BusinessLogicLayer
             return Almacen.GetAllAnimals();
         }
 
+        public static Entidad GetEntidadById(int id)
+        {
+            SetAnimalStoreInstance();
+            return Almacen.GetEntidadById(id);
+        }
+
         public static Entidad AlterAnimal(Entidad animal)
         {
             SetAnimalStoreInstance();

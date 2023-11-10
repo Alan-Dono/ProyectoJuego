@@ -21,13 +21,13 @@ namespace SmallWord
             Application.Run(new FrmCrudEntidad());
 
             //---------------------- Prueba de creacion de entidades -----------------------------
-            Entidad pj1 = new Entidad("Leon", new Carnivoro(),new Terrestrial() ,new AnimalKing(), 100, 500, 100, 50, 1);
-            Entidad pj2 = new Entidad("León", new Carnivoro(), new Terrestrial(), new AnimalKing(), 100, 500, 100, 50, 1);
-            Entidad pj3 = new Entidad("Lobo", new Carnivoro(), new Terrestrial(), new AnimalKing(), 80, 400, 90, 60, 1);
-            Entidad pj4 = new Entidad("Oveja", new Herbivoro(), new Terrestrial(), new AnimalKing(), 60, 300, 80, 400, 1);
-            Entidad pj5 = new Entidad("Águila", new Carnivoro(), new Aerial(), new AnimalKing(), 20, 150, 70, 30, 1);
-            Entidad pj6 = new Entidad("Cocodrilo", new Carnivoro(), new Acuatic(), new AnimalKing(), 150, 600, 110, 70, 1);
-            Entidad pj7 = new Entidad("Salmón", new Herbivoro(), new Acuatic(), new AnimalKing(), 40, 200, 60, 20, 1);          
+            Entidad pj1 = new Entidad("Tiburon", Carnivoro.GetInstance(), Acuatic.GetInstance(), AnimalKing.GetInstance(), 300, 200, 700, 300, 1);
+            Entidad pj2 = new Entidad("León", Carnivoro.GetInstance(), Terrestrial.GetInstance(), AnimalKing.GetInstance(), 100, 500, 100, 50, 1);
+            Entidad pj3 = new Entidad("Lobo", Carnivoro.GetInstance(), Terrestrial.GetInstance(), AnimalKing.GetInstance(), 80, 400, 90, 60, 1);
+            Entidad pj4 = new Entidad("Oveja", Herbivoro.GetInstance(), Terrestrial.GetInstance(), AnimalKing.GetInstance(), 60, 300, 80, 400, 1);
+            Entidad pj5 = new Entidad("Águila", Carnivoro.GetInstance(), Aerial.GetInstance(), AnimalKing.GetInstance(), 20, 150, 70, 30, 1);
+            Entidad pj6 = new Entidad("Cocodrilo", Carnivoro.GetInstance(), Acuatic.GetInstance(), AnimalKing.GetInstance(), 150, 600, 110, 70, 1);
+            Entidad pj7 = new Entidad("Salmón", Herbivoro.GetInstance(), Acuatic.GetInstance(), AnimalKing.GetInstance(), 40, 200, 60, 20, 1);          
             Console.WriteLine(pj1.ToString() + "\n\n" + 
                               pj2.ToString() + "\n\n" + 
                               pj3.ToString() + "\n\n" + 

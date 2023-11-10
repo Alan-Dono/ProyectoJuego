@@ -29,9 +29,9 @@ namespace ControllersLayer
         {
             return new List<IDiet>()
             {
-                new Carnivoro(),
-                new Herbivoro(),
-                new Omnivoro()
+                Carnivoro.GetInstance(),
+                Herbivoro.GetInstance(),
+                Omnivoro.GetInstance()
             };
         }
 
@@ -39,10 +39,10 @@ namespace ControllersLayer
         {
             return new List<IEnviroment>()
             {
-                new Acuatic(),
-                new Aerial(),
-                new Amphibian(),
-                new Terrestrial()
+                Acuatic.GetInstance(),
+                Aerial.GetInstance(),
+                Amphibian.GetInstance(),
+                Terrestrial.GetInstance()
             };
         }
 
@@ -50,8 +50,8 @@ namespace ControllersLayer
         {
             return new List<Ikingdom>()
             {
-                new AnimalKing(),
-                new Vegetal()
+                AnimalKing.GetInstance(),
+                Vegetal.GetInstance()
             };
         }
 
